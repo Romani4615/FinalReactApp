@@ -5,7 +5,7 @@ export default class Login extends Component {
         return (
             <div className="col-md-6 flex-column justify-content-center" id="loginCol">
                 This is the Login Page
-                <form onSubmit={this.props.handleLogIn}>
+                <form id="formid" onSubmit={this.props.handleLogIn}>
                     <div className='form-group'>
                         <fieldset>
                             <label htmlFor='username'></label>

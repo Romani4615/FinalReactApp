@@ -178,3 +178,10 @@ h1 {
   color: #40b48e;
   font-size: .8rem;
 }
+/*  */
+#Navbar {
+  color: #40b48e;
+  border-color: #40b48e !important;
+  border-radius: 10px;
+  box-shadow: .25rem .25rem 5rem #40b48e;
+}

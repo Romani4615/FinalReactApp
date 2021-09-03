@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Switch, Route} from 'react-router-dom';
+import { Switch, Route } from 'react-router-dom';
 import Navbar from './components/Navbar';
 import PostDetail from './components/PostDetail';
 import About from './views/About';
@@ -16,7 +16,8 @@ export default class App extends Component {
     super(props);
     console.log('component constructing...')
     this.state = {
-      isLoggedIn: false
+      isLoggedIn: false,
+      // redirect: ''
     }
   }
   
@@ -39,9 +40,12 @@ handleLogIn = (e) => {  // onsubmit in login runs this function with this.props.
   .then(data => {
     console.log(data)
     this.setState({
-      isLoggedIn: true  //dependent on if user is logged in
+      isLoggedIn: true,
     })
+    console.log("trying to redirect")
     localStorage.setItem('token', data.token)  //hover set item
+      //dependent on if user is logged in  setState({redirect: '/'})
+
   })
 }
 //in console, you can now look
@@ -84,7 +88,7 @@ handleLogOut = () => {
             <Route exact path="/users/:id" component={SingleUser} />
             <Route exact path="/posts/:id" component={PostDetail} />
             <Route exact path="/login">
-            <Login handleLogIn={this.handleLogIn}/> 
+            <Login handleLogIn={this.handleLogIn} /> 
           </Route>
           </Switch>
           {/* <h1>Single Page Test</h1> */}
