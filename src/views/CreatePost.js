@@ -44,7 +44,7 @@ export default class CreatePost extends Component {
                             <label htmlFor='body'>Body</label>
                             <input type='text' className='form-control' name='body' placeholder='Body'></input>
                         </fieldset>
-                        <button type='submit' className='btn btn-outline-secondary mt-3'>Create Post</button>
+                        <button type='submit' className='btn btn-outline-warning mt-3'>Create Post</button>
                     </div>
                 </form>
             </div>

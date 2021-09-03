@@ -19,13 +19,7 @@ export default class App extends Component {
       isLoggedIn: false
     }
   }
-  // updateName= () =>{                  //updating the name via prompt
-  //   const newName = prompt("What's ur name?")
-  //   this.setState({
-  //      myName: this.props.username 
-  //     })
-  // }
-
+  
 handleLogIn = (e) => {  // onsubmit in login runs this function with this.props.handlelogin
   e.preventDefault(); //stops from re running
   console.log(e);
